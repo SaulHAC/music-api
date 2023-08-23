@@ -78,7 +78,7 @@ export class ApiService {
 
     const observables: Observable<any>[] = [];
 
-    for (let index = 0; index < 0; index++) {
+    for (let index = 0; index < 4; index++) {
       let artist = data[index];
       let url = `${this.customSearchJson}${this.key1}&cx=${this.motor1}&searchType=image&q=${artist.name}`;
 
