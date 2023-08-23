@@ -22,9 +22,9 @@ export class ApiService {
 
   //Artistas, albumes y canciones
   private apiKey = '8f102e2d6e45e028c2ef5650ff82586e'; // Reemplaza con tu clave de API de Last.fm
-  private apiUrl = 'http://ws.audioscrobbler.com/2.0/';
+  private apiUrl = 'https://ws.audioscrobbler.com/2.0/';
   private apiToSearch = 'https://ws.audioscrobbler.com/2.0/?method=track.search&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json&track=';
-  private apiToTags = 'https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json&tag=';
+  private apiToTags = 'httpss://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json&tag=';
   private apiToAllTags = 'http://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json';
 
   //generos
@@ -78,7 +78,7 @@ export class ApiService {
 
     const observables: Observable<any>[] = [];
 
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 0; index++) {
       let artist = data[index];
       let url = `${this.customSearchJson}${this.key1}&cx=${this.motor1}&searchType=image&q=${artist.name}`;
 
