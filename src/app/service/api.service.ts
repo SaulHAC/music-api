@@ -24,8 +24,8 @@ export class ApiService {
   private apiKey = '8f102e2d6e45e028c2ef5650ff82586e'; // Reemplaza con tu clave de API de Last.fm
   private apiUrl = 'https://ws.audioscrobbler.com/2.0/';
   private apiToSearch = 'https://ws.audioscrobbler.com/2.0/?method=track.search&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json&track=';
-  private apiToTags = 'httpss://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json&tag=';
-  private apiToAllTags = 'http://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json';
+  private apiToTags = 'https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json&tag=';
+  private apiToAllTags = 'https://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json';
 
   //generos
   private urlGenres = 'https://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=8f102e2d6e45e028c2ef5650ff82586e&format=json';
