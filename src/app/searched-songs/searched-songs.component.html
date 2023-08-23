@@ -1,0 +1,52 @@
+<div class="text-white inset-0 md:w-[90%] w-[92%] mx-auto py-14">
+    <h1 class="font-bold text-xl mb-10">Coincidencias con {{ query_search }}</h1>
+
+    <!-- <div class="text-white">
+        <h1>Songs of album "{{ albumName }}"</h1>
+
+        <div>
+            <ul>
+                <li *ngFor="let song of data">
+                    {{ song.name }}
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <div class="bg-transparent p-1 my-14 w-full flex flex-col md:flex-row md:space-x-10 space-y-5 md:space-y-0">
+
+        <div class="bg-zinc-900 p-8 md:w-[45%] w-full h-30">
+
+            <ul class="text-white w-full space-x-auto overflow-auto">
+                <li *ngFor="let cancion of canciones_encontradas; let i = index" class="bg-transparent m-3">
+                    <div class="w-full bg-zinc-800 p-4 rounded-2xl flex justify-between items-center">
+                        <div>
+                            <p class="text-lg font-bold mb-2"> {{ cancion.name }}</p>
+                            <p class="text-base"> {{ cancion.artist }}</p>
+                        </div>
+                        <button (click)="obtenerCancion(i)" type="button" class="
+                            space-x-2
+                            flex
+                            font-bold
+                            text-white
+                            bg-blue-600  
+                            rounded-3xl          
+                            shadow-xl
+                            text-md
+                            px-5
+                            py-2 text-center mr-2">
+                            Play now
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="md:w-[55%] w-full bg-zinc-900 p-8">
+            <h1 class="font-bold text-xl mb-8">Song playing</h1>
+            <app-song-playing></app-song-playing>
+        </div>
+    </div>
+
+</div>

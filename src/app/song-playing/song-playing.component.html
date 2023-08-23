@@ -1,0 +1,15 @@
+<div>
+    <div
+        class="bg-zinc-950 md:w-[70%] w-[85%] mx-auto rounded-xl flex justify-center items-center py-10 flex-col px-10 relative">
+        <img class="mt-8 bg-white/30 filter blur-sm opacity-[40%] object-none w-[300px]"
+            [src]="apiService.youtubeImage || '../../assets/images/hqdefault.jpg'" alt="">
+
+        <p class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl md:text-2xl">{{
+            apiService.artistName ||
+            'Select a song' }}</p>
+
+        <p class="text-white text-center font-bold md:text-base text-sm mt-10">{{ apiService.songName || '- Name song -'
+            }}
+        </p>
+    </div>
+</div>

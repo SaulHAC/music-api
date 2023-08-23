@@ -1,0 +1,8 @@
+<!-- <button class="bg-blue-600 p-4 rounded-3xl">Play</button>
+<p>url peligrosa desde music player component: {{ apiService.safeUrl }}</p> -->
+
+<div>
+    <iframe [src]="apiService.safeUrl" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</div>

@@ -1,0 +1,79 @@
+<div class="text-white inset-0 md:w-[90%] w-[92%] mx-auto py-14 relative">
+    <h1 class="font-bold text-xl mb-10">Most Popular Hit</h1>
+
+    <div>
+        <h2 class="font-bold text-8xl mb-4">{{ nameSongTrending }}</h2>
+        <span class="flex">
+            <h3 class="font-bold text-2xl mr-20">{{ nameArtistTrending }}</h3>
+            <h3 class="text-2xl">Album: {{ nameAlbumTrending }}</h3>
+        </span>
+        <button (click)="obtenerCancion()" type="button" class="
+        space-x-2
+            flex
+            mt-8
+            font-bold
+            text-white
+            bg-blue-600  
+            rounded-3xl          
+            shadow-xl
+            text-xl
+            dark:shadow-lg dark:shadow-blue-800/80 px-5
+            py-3 text-center mr-2">
+            <p>
+                Play now
+            </p>
+
+            <svg class="mt-1" fill="#fafafa" width="22px" height="22px" viewBox="0 0 32 32" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" stroke="#fafafa">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <title>play</title>
+                    <path
+                        d="M5.92 24.096q0 1.088 0.928 1.728 0.512 0.288 1.088 0.288 0.448 0 0.896-0.224l16.16-8.064q0.48-0.256 0.8-0.736t0.288-1.088-0.288-1.056-0.8-0.736l-16.16-8.064q-0.448-0.224-0.896-0.224-0.544 0-1.088 0.288-0.928 0.608-0.928 1.728v16.16z">
+                    </path>
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <div class="bg-transparent p-1 my-14 w-full flex flex-col md:flex-row md:space-x-10 space-y-5 md:space-y-0">
+        <!--TOP ARTIST SECTION-->
+        <div class="bg-zinc-900 p-8 md:w-[45%] w-full rounded-xl">
+            <h1 class="font-bold text-xl mb-5">Top Artists</h1>
+
+            <ul class="text-white font-bold w-full flex space-x-auto overflow-x-scroll">
+                <li *ngFor="let artist of data; let i = index" class="bg-transparent m-6">
+                    <div class="w-[120px]">
+
+                        <div>
+                            <img [src]="arrayImageArtist[i]" alt="Artist Image"
+                                class="object-cover w-[120px] h-[120px] rounded-3xl mb-2" />
+                            <!-- <img src="../../assets/images/TaylorSwift.png" alt="Artist Image"
+                                class="object-cover w-[120px] h-[120px] rounded-3xl mb-2" /> -->
+                        </div>
+
+                        <a [routerLink]="[artist.name,'top_albumes']">{{ artist.name}}</a>
+                        <p class="font-light text-nade text-sm">{{ artist.playcount }} Plays</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--ANY SECTION-->
+        <div class="md:w-[55%] w-full bg-zinc-900 p-8 rounded-xl">
+            <app-generos></app-generos>
+        </div>
+    </div>
+
+    <div class="absolute z-[-10] top-0 right-0 w-[60%] hidden sm:block">
+        <div class="absolute w-full h-full bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent z-[2]"></div>
+        <div class="absolute w-full h-full bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent z-[2]"></div>
+        <div class="absolute w-full h-full bg-gradient-to-b from-zinc-950 via-zinc-950/20 to-transparent z-[2]"></div>
+        <div class="absolute w-full h-full bg-gradient-to-l from-zinc-950 via-zinc-950/20 to-transparent z-[2]"></div>
+        <img class="" src="../../assets/images/taylor-background.jpg" alt="">
+    </div>
+</div>
+
+<!-- <div class="text-white">
+    {{ data | json }}
+</div> -->

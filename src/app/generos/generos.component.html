@@ -1,0 +1,15 @@
+<div>
+    <div class="mb-8 flex justify-between mr-5">
+        <h1 class="font-bold text-xl">Top Tags</h1>
+        <h1 class=" text-gray-400 text-base underline"><a [routerLink]="'all_tags'">View all</a></h1>
+    </div>
+    <ul class="grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-1">
+        <li *ngFor="let genero of generos" class="mr-4">
+            <button [routerLink]="[genero.name, 'top_songs']" [style.background-color]="genero.backgroundColor"
+                class="relative mb-4 px-5 py-6 rounded w-full min-h-[6rem]">
+                <p class="font-bold capitalize uppercase text-md text-center">{{ genero.name }}</p>
+                <span class="absolute inset-0 bg-black opacity-0 z-0 before:block"></span>
+            </button>
+        </li>
+    </ul>
+</div>
