@@ -1,11 +1,11 @@
-<div class="flex w-full bg-zinc-950 p-4 bottom-0 fixed h-[85px] border border-zinc-900 px-[50px]">
+<div class="flex w-full bg-zinc-950 p-4 bottom-0 fixed h-[85px] border border-zinc-900 px-[50px] z-[20]">
     <div class="text-white flex items-center justify-start w-full">
-        <div class="flex flex-col mr-5">
-            <p class="font-bold md:text-xl text-base">
-                {{ apiService.songName || 'Play a song' }}
+        <div class="flex flex-col mr-5 md:w-[100%] w-[100px]">
+            <p class="font-bold md:text-xl text-base truncate">
+                {{ apiService.songName || 'Dont You Worry Child - Radio Edit' }}
             </p>
             <p class="text-sm">
-                {{ apiService.artistName || 'Select a song'}}
+                {{ apiService.artistName || 'Swedish House Mafia'}}
             </p>
         </div>
         <!-- <div class="flex flex-col md:flex-row">

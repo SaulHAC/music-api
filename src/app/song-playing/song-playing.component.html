@@ -1,14 +1,23 @@
 <div>
     <div
-        class="bg-zinc-950 md:w-[70%] w-[85%] mx-auto rounded-xl flex justify-center items-center py-10 flex-col px-10 relative">
-        <img class="mt-8 bg-white/30 filter blur-sm opacity-[40%] object-none w-[300px]"
-            [src]="apiService.youtubeImage || '../../assets/images/hqdefault.jpg'" alt="">
+        class="object-none md:w-[70%] w-[85%] mx-auto rounded-xl flex justify-center items-center py-10 flex-col px-10 relative">
+        <div class="rounded-full border-double border-[6px] border-gray-200 z-[2]">
+            <img class="bg-white/30 filter blur-[2px] opacity-[35%] h-[300px] w-[300px] object-none rounded-full"
+                [src]="apiService.youtubeImage || '../../assets/images/hqdefault.jpg'" alt="">
 
-        <p class="absolute inset-0 flex items-center justify-center text-white font-bold text-xl md:text-2xl">{{
-            apiService.artistName ||
-            'Select a song' }}</p>
+            <p
+                class="w-[250px] text-center mx-auto font-cursive absolute inset-0 flex items-center justify-center text-white font-bold text-xl md:text-4xl">
+                {{
+                apiService.artistName ||
+                'Select a song' }}</p>
+        </div>
 
-        <p class="text-white text-center font-bold md:text-base text-sm mt-10">{{ apiService.songName || '- Name song -'
+        <img class="absolute w-full h-full filter blur-[50px] z-[0]"
+            [src]=" apiService.youtubeImage || '../../assets/images/hqdefault.jpg'">
+
+        <p class="z-[2] font-cursive2 text-white text-center font-bold md:text-xl text-md mt-10">{{ apiService.songName
+            ||
+            '- Name song -'
             }}
         </p>
     </div>

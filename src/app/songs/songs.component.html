@@ -1,5 +1,5 @@
 <div class="text-white inset-0 md:w-[90%] w-[92%] mx-auto py-14">
-    <h1 class="font-bold text-xl mb-10">Songs of album "{{ albumName }}"</h1>
+    <h1 class="font-bold text-xl">Songs of album "{{ albumName }}"</h1>
 
     <!-- <div class="text-white">
         <h1>Songs of album "{{ albumName }}"</h1>
@@ -13,7 +13,7 @@
         </div>
     </div> -->
 
-    <div class="bg-transparent p-1 my-14 w-full flex flex-col md:flex-row md:space-x-10 space-y-5 md:space-y-0">
+    <div class="bg-transparent p-1 my-6 w-full flex flex-col md:flex-row md:space-x-10 space-y-5 md:space-y-0">
         <!--TOP ARTIST SECTION-->
         <div class="bg-zinc-900 p-8 md:w-[45%] w-full h-30">
 
@@ -42,7 +42,7 @@
             </ul>
         </div>
         <!--ANY SECTION-->
-        <div class="md:w-[55%] w-full bg-zinc-900 p-8">
+        <div class="md:w-[55%] w-full h-fit bg-zinc-900 p-8 rounded sticky top-10">
             <h1 class="font-bold text-xl mb-8">Song playing</h1>
             <app-song-playing></app-song-playing>
         </div>

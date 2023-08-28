@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'cursive': ['Dancing Script', 'cursive'],
+        'cursive2': ['Cabin', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
